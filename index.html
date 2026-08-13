@@ -1145,3 +1145,20 @@ else{t.classList.remove('cards');if(w)w.classList.remove('iscards')}
 });
 })();
 </script>
+
+<style>
+@media(max-width:620px){
+table.cards tbody td{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:12px;border:0;padding:5px 0;background:none!important}
+table.cards tbody td:before{content:attr(data-l);font-size:11.5px;color:var(--mut);line-height:1.35;min-width:0;overflow-wrap:anywhere;flex:none}
+table.cards tbody td.n{text-align:right;font-weight:600;color:var(--ink);white-space:nowrap}
+table.cards tbody td:first-child{display:block!important;font-weight:700;color:var(--navy);font-size:14px;padding-bottom:8px}
+table.cards tbody td:first-child:before{display:none}
+}
+</style>
+<script>
+(function(){
+function limpa(s){return (s||'').replace(/\s+/g,' ').replace(/(\d|[a-zà-öø-ÿ])([A-ZÀ-ÖØ-Þ])/g,'$1 $2').trim()}
+document.querySelectorAll('.tw table.cards tbody td[data-l]').forEach(function(c){
+var v=limpa(c.getAttribute('data-l'));if(v)c.setAttribute('data-l',v)});
+})();
+</script>
