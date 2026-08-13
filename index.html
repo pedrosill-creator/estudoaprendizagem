@@ -1162,3 +1162,12 @@ document.querySelectorAll('.tw table.cards tbody td[data-l]').forEach(function(c
 var v=limpa(c.getAttribute('data-l'));if(v)c.setAttribute('data-l',v)});
 })();
 </script>
+
+<style>
+@media(max-width:620px){
+table.cards tbody td{white-space:normal!important;align-items:start!important;gap:14px!important;padding:6px 0!important}
+table.cards tbody td:before{white-space:normal!important;overflow-wrap:anywhere;text-align:left!important;justify-self:start}
+table.cards tbody td.n{white-space:normal!important;text-align:right!important}
+table.cards tbody td:first-child:before{display:none}
+}
+</style>
