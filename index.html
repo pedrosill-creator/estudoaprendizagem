@@ -1092,3 +1092,17 @@ document.querySelectorAll('.tw table').forEach(t=>{
 });
 </script>
 </body></html>
+
+<style>
+html,body{overflow-x:hidden}
+.tscroll{overflow-x:auto}
+@media(max-width:1059px){
+.wrap{grid-template-columns:minmax(0,1fr);padding:0 15px}
+main{max-width:100%;margin:0;min-width:0}
+}
+@media(max-width:620px){
+.tw.iscards .tscroll{overflow:visible;border:0;background:none;border-radius:0}
+.tw.iscards .thint{display:none}
+}
+</style>
+<script>document.querySelectorAll('.tw table.cards').forEach(function(t){var w=t.closest('.tw');if(w)w.classList.add('iscards')})</script>
